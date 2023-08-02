@@ -8,11 +8,11 @@
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	if (!tree)
-		return (0);
-
 	size_t sinister_size = 0;
 	size_t dexter_size = 0;
+
+	if (!tree)
+		return (0);
 
 	if (tree->left)
 		sinister_size += 1 + binary_tree_height(tree->left);
